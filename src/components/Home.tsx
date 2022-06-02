@@ -9,7 +9,7 @@ function Home() {
     const [keyword, setKeyword] = useState("");
     const [filteredData] = CountryData(keyword);
 
-    const handleChange = useCallback((e) => {
+    const handleChange = useCallback((e:any) => {
         setKeyword(e.target.value);
         console.log("serach");
     },[keyword]);

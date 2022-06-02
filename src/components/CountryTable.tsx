@@ -1,7 +1,11 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table'
 import { Link } from 'react-router-dom';
-const CountryTable = ({ countries }) => {
+import { Country } from './types';
+type MyCountry={
+    countries:Country[];
+}
+const CountryTable = ({ countries }:MyCountry) => {
     return (
         <Table striped bordered hover>
             <thead>
@@ -13,7 +17,7 @@ const CountryTable = ({ countries }) => {
                 </tr>
             </thead>
             <tbody>
-                {countries.map((country) => (
+                {countries.map((country:Country) => (
                     <tr key={country.name.common}>
                         <td>{country.flag}</td>
                         <td>
