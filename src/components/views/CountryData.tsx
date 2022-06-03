@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-export default function CountryData(keyword) {
+import { Country } from '../types/types';
+export default function CountryData(keyword:string) {
     const [countries, setCountries] = useState([]);
     const [filteredData, setFiltereddata] = useState([]);
     useEffect(() => {
@@ -13,7 +14,7 @@ export default function CountryData(keyword) {
     }, []);
 
     useEffect(() => {
-        let filteredData = countries.filter((country) => {
+        let filteredData = countries.filter((country:Country) => {
             return (
                 country.name.common
                     .toLowerCase()

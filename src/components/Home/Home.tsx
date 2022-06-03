@@ -1,15 +1,15 @@
-import '../App.css';
-import React, { useCallback, useEffect, useState } from 'react';
 
-import CountryTable from './CountryTable';
-import Search from './Search';
-import CountryData from './CountryData';
+import React, { useCallback, useEffect, useState } from 'react';
+import '../../App.css'
+import CountryTable from '../views/CountryTable';
+import Search from '../Navigation/Search';
+import CountryData from '../views/CountryData';
 function Home() {
 
     const [keyword, setKeyword] = useState("");
     const [filteredData] = CountryData(keyword);
 
-    const handleChange = useCallback((e:any) => {
+    const handleChange = useCallback((e:React.ChangeEvent<HTMLInputElement>) => {
         setKeyword(e.target.value);
         console.log("serach");
     },[keyword]);

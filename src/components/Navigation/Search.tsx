@@ -1,5 +1,10 @@
 import React from 'react'
-const Search = ({ value, handleChange }) => {
+type SearchProp={
+    value:string,
+    handleChange:(event:React.ChangeEvent<HTMLInputElement>)=>void
+}
+
+const Search = ({ value, handleChange }:SearchProp) => {
 
     return (
         <>

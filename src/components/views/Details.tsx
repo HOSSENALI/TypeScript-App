@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { Country } from '../types/types';
 
 const Details = () => {
     const { name } = useParams();
@@ -14,7 +15,7 @@ const Details = () => {
 
     return (
         <div>
-            {countries.filter((country) => country.name.common === name).map(filteredCountry => (
+            {countries.filter((country:Country) => country.name.common === name).map((filteredCountry:Country )=> (
 
                 <div key={filteredCountry.name.common}> 
                  <h1>Country name:{filteredCountry.name.common}</h1>

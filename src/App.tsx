@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter,Routes,Route } from "react-router-dom";
-import About from './components/About';
-import Details from './components/Details';
-import Home from './components/Home';
-import Navigation from './components/Navigation';
-import Welcome from './components/Welcome';
+import About from './components/views/About';
+import Details from './components/views/Details';
+import Home from './components/Home/Home';
+import Navigation from './components/Navigation/Navigation';
+import Welcome from './components/views/Welcome';
 const App = () => {
   return (
     <BrowserRouter>
