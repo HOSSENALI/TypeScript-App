@@ -11,8 +11,8 @@ function Home() {
 
     const handleChange = useCallback((e:React.ChangeEvent<HTMLInputElement>) => {
         setKeyword(e.target.value);
-        console.log("serach");
     },[keyword]);
+    
     return (
         <div className='home'>
             <div className='search'>
